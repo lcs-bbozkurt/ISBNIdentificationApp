@@ -20,9 +20,12 @@ struct ContentView: View {
     var feedback: String {
         if oneThreeSum.bitPattern.isMultiple(of: 10) {
             return "ISBN number is accurate."
+                
         } else {
             return "ISBN number is NOT accurate."
+                
         }
+            
     }
     var body: some View {
         // Input
@@ -91,11 +94,15 @@ struct ContentView: View {
                 })
                 
                 SliderValueView(value: digitThirteen)
+                        .padding()
                 }
-                Group {
-                    
-                SectionLabelView(text: "Result")
                 
+                Group {
+                    HStack {
+                SectionLabelView(text: "Result:")
+                            .padding()
+                        Spacer()
+                    }
                 // Output: result
                 OutputValueView(outputValue: oneThreeSum)
                         .padding()
