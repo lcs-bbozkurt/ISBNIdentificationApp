@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C129ECFB27667E82000B0CB9 /* OutputValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C129ECFA27667E82000B0CB9 /* OutputValueView.swift */; };
 		C1B56C76276502E2009F98CA /* ISBNIdentificationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B56C75276502E2009F98CA /* ISBNIdentificationAppApp.swift */; };
 		C1B56C78276502E2009F98CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B56C77276502E2009F98CA /* ContentView.swift */; };
 		C1B56C7A276502E4009F98CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B56C79276502E4009F98CA /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C129ECFA27667E82000B0CB9 /* OutputValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputValueView.swift; sourceTree = "<group>"; };
 		C1B56C72276502E2009F98CA /* ISBNIdentificationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISBNIdentificationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B56C75276502E2009F98CA /* ISBNIdentificationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBNIdentificationAppApp.swift; sourceTree = "<group>"; };
 		C1B56C77276502E2009F98CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,7 +61,6 @@
 				C1B56C862765BC3D009F98CA /* Helpers */,
 				C1B56C83276562BC009F98CA /* Views */,
 				C1B56C77276502E2009F98CA /* ContentView.swift */,
-				C1B56C79276502E4009F98CA /* Assets.xcassets */,
 				C1B56C7B276502E4009F98CA /* Preview Content */,
 			);
 			path = ISBNIdentificationApp;
@@ -68,6 +69,7 @@
 		C1B56C7B276502E4009F98CA /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				C1B56C79276502E4009F98CA /* Assets.xcassets */,
 				C1B56C7C276502E4009F98CA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -85,6 +87,7 @@
 			children = (
 				C1B56C84276562DD009F98CA /* SectionLabelView.swift */,
 				C1B56C872765BC61009F98CA /* SliderValueView.swift */,
+				C129ECFA27667E82000B0CB9 /* OutputValueView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1B56C85276562DE009F98CA /* SectionLabelView.swift in Sources */,
+				C129ECFB27667E82000B0CB9 /* OutputValueView.swift in Sources */,
 				C1B56C78276502E2009F98CA /* ContentView.swift in Sources */,
 				C1B56C76276502E2009F98CA /* ISBNIdentificationAppApp.swift in Sources */,
 				C1B56C882765BC61009F98CA /* SliderValueView.swift in Sources */,

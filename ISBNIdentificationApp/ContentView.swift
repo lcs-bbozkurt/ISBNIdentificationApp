@@ -15,28 +15,50 @@ struct ContentView: View {
     @State var digitThirteen = 5.0
     // MARK: Computed Properties
     var oneThreeSum: Double {
-        return 9 * 1 + 7 * 3 + 8 * 1 + 0 * 3 + 9 * 1 + 2 * 3 + 1 * 1 + 4 * 3 + 1 * 1 + 8 * 3 + digitEleven * 1 + digitTwelve * 3 + digitThirteen * 1
+        return 91 + digitEleven * 1 + digitTwelve * 3 + digitThirteen * 1
+    }
+    var feedback: String {
+        if oneThreeSum.bitPattern.isMultiple(of: 10) {
+            return "ISBN number is accurate."
+        } else {
+            return "ISBN number is NOT accurate."
+        }
     }
     var body: some View {
-       // Input
+        // Input
         ScrollView {
-            VStack { (alignment: .leading ,spacing: 20)
-            Slider(value: $digitEleven,
-                   in: 0.0...9.0,
-                   step: 0.1,
-                   label: {
-                Text("Digit Eleven")
-            },
-                   minimumValueLabel: {
-                Text("0")
-            },
-                   maximumValueLabel: {
-                Text("9")
-            })
+            VStack {
                 
+                Group {
+                    HStack {
+                    SectionLabelView(text: "Digit Eleven")
+                        Spacer()
+                    }
+                    Slider(value: $digitEleven,
+                           in: 0.0...9.0,
+                           step: 1.0,
+                           label: {
+                        Text("Digit Eleven")
+                    },
+                           minimumValueLabel: {
+                        Text("0")
+                    },
+                           maximumValueLabel: {
+                        Text("9")
+                    })
+                    
+                    SliderValueView(value: digitEleven)
+                        .padding()
+
+                }
+                Group {
+                    HStack {
+                SectionLabelView(text: "Digit Twelve")
+                        Spacer()
+                    }
                 Slider(value: $digitTwelve,
                        in: 0.0...9.0,
-                       step: 0.1,
+                       step: 1.0,
                        label: {
                     Text("Digit Twelve")
                 },
@@ -47,9 +69,17 @@ struct ContentView: View {
                     Text("9")
                 })
                 
+                SliderValueView(value: digitTwelve)
+                    .padding()
+                }
+                Group {
+                    HStack {
+                    SectionLabelView(text: "Digit Thirteen")
+                        Spacer()
+                    }
                 Slider(value: $digitThirteen,
                        in: 0.0...9.0,
-                       step: 0.1,
+                       step: 1.0,
                        label: {
                     Text("Digit Thirteen")
                 },
@@ -59,32 +89,40 @@ struct ContentView: View {
                        maximumValueLabel: {
                     Text("9")
                 })
-        // Output
                 
+                SliderValueView(value: digitThirteen)
+                }
+                Group {
+                    
+                SectionLabelView(text: "Result")
                 
-                
-                
-                
-                
-                
+                // Output: result
+                OutputValueView(outputValue: oneThreeSum)
+                        .padding()
+                // Feedback
+                Text(feedback)
+                }
                 
             }
+            .padding()
         }
         
-   
-    
-            
-            
-            
-            .navigationTitle("ISBN Identification")
-            .navigationBarTitleDisplayMode(.inline)
+        
+        
+        
+      
+        .navigationTitle("ISBN Identification")
+        .navigationBarTitleDisplayMode(.inline)
+       
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-        ContentView()
+            ContentView()
+        }
+        .preferredColorScheme(.dark)
+.previewInterfaceOrientation(.portrait)
     }
-}
 }

@@ -23,6 +23,6 @@ struct SectionLabelView: View {
 
 struct SectionLabelView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionLabelView(text: Example)
+        SectionLabelView(text: "Example")
     }
 }

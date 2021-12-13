@@ -13,7 +13,7 @@ struct SliderValueView: View {
     
     // MARK: Computed Properties
     var formattedValue: String {
-        return String(format: "%.1f", value)
+        return String(format: "%.0f", value)
     }
     var body: some View {
         
@@ -28,6 +28,6 @@ struct SliderValueView: View {
 }
 struct SliderValueView_Previews: PreviewProvider {
     static var previews: some View {
-        SliderValueView(value: 5.0)
+        SliderValueView(value: 5)
     }
 }
